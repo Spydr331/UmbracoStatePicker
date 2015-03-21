@@ -1,0 +1,15 @@
+<div ng-controller="Feola.StatePicker" class="container">	
+	<div class="btn-group" role="group" aria-label="...">
+	  <button type="button" class="btn btn-default" ng-class="{'btn-success': !showMap}" ng-click="showMap = false">List</button>
+	  <button type="button" class="btn btn-default" ng-class="{'btn-success': showMap}" ng-click="showMap = true">Map</button>
+	</div>
+	<br/>
+	<br/>
+	<div ng-show="showMap" id="map" style="width:400px; height: 275px;"></div>
+	
+	<ul ng-hide="showMap" class="text-center row" style="width:400px;">
+	  <li ng-repeat="state in arrayStates" class="span2" id="{{state}}">
+		<span class="btn btn-block " ng-class="{'btn-inverse':isSelected(state)}" ng-click="changeStates(state)">{{state}}</span>
+	  </li> 
+	</ul>
+</div>

@@ -1,0 +1,16 @@
+{    	
+	propertyEditors: [		
+		{
+			alias: "Feola.StatePicker",
+			name: "State Picker",
+			editor: {
+				view: "~/App_Plugins/StatePicker/statepicker.html"
+			}
+		}
+	],
+	javascript: [
+	    '~/App_Plugins/StatePicker/lib/raphael.js',
+		'~/App_Plugins/StatePicker/lib/jquery.usmap.js',
+		'~/App_Plugins/StatePicker/statepicker.controller.js'
+	]
+}
